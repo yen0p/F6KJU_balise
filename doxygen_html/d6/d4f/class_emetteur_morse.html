@@ -1,0 +1,432 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Balise Morse HF F6KJU: Référence de la classe EmetteurMorse</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Balise Morse HF F6KJU<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Documentation du code source pour la balise Morse HF/VHF basée sur Arduino Mega 2560.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('d6/d4f/class_emetteur_morse.html','../../','dc/d25/class_emetteur_morse-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence de la classe EmetteurMorse</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Le "télégraphiste" expert en code Morse.  
+ <a href="#details">Plus de détails...</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d7/dc5/_emetteur_morse_8h_source.html">EmetteurMorse.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Fonctions membres publiques</h2></td></tr>
+<tr class="memitem:a576074e489a4ed685cdaa99d0b488b50" id="r_a576074e489a4ed685cdaa99d0b488b50"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a576074e489a4ed685cdaa99d0b488b50">EmetteurMorse</a> (int pttPin, int txLedPin, int wpm)</td></tr>
+<tr class="memdesc:a576074e489a4ed685cdaa99d0b488b50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construit notre "télégraphiste".  <br /></td></tr>
+<tr class="memitem:a4c14514f6b098786f9e0439ba89b7646" id="r_a4c14514f6b098786f9e0439ba89b7646"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c14514f6b098786f9e0439ba89b7646">sendMessage</a> (const char *message)</td></tr>
+<tr class="memdesc:a4c14514f6b098786f9e0439ba89b7646"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prend un message et le transmet en Morse du début à la fin.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Fonctions membres privées</h2></td></tr>
+<tr class="memitem:a0c0d63e0b5542cf775a099e9aa7a60ac" id="r_a0c0d63e0b5542cf775a099e9aa7a60ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c0d63e0b5542cf775a099e9aa7a60ac">sendChar</a> (char c)</td></tr>
+<tr class="memdesc:a0c0d63e0b5542cf775a099e9aa7a60ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interne : traduit et envoie un seul caractère.  <br /></td></tr>
+<tr class="memitem:a638a4318652eaf78dfe16ee1863c7dcd" id="r_a638a4318652eaf78dfe16ee1863c7dcd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a638a4318652eaf78dfe16ee1863c7dcd">dot</a> ()</td></tr>
+<tr class="memdesc:a638a4318652eaf78dfe16ee1863c7dcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Génère le son court ("point") du Morse.  <br /></td></tr>
+<tr class="memitem:aba9287616dedb467115f067f7d315e05" id="r_aba9287616dedb467115f067f7d315e05"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aba9287616dedb467115f067f7d315e05">dash</a> ()</td></tr>
+<tr class="memdesc:aba9287616dedb467115f067f7d315e05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Génère le son long ("trait") du Morse.  <br /></td></tr>
+<tr class="memitem:aecc00dba95a6d9b43e837a5722cce63c" id="r_aecc00dba95a6d9b43e837a5722cce63c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aecc00dba95a6d9b43e837a5722cce63c">pttOn</a> ()</td></tr>
+<tr class="memdesc:aecc00dba95a6d9b43e837a5722cce63c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appuie sur le bouton du PTT et allume la LED d'émission.  <br /></td></tr>
+<tr class="memitem:a21126be06abd6e7c7029ceb54a2401cb" id="r_a21126be06abd6e7c7029ceb54a2401cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a21126be06abd6e7c7029ceb54a2401cb">pttOff</a> ()</td></tr>
+<tr class="memdesc:a21126be06abd6e7c7029ceb54a2401cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Relâche le bouton du PTT et éteint la LED d'émission.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Attributs privés</h2></td></tr>
+<tr class="memitem:acac5313d0ca88cf2fe36b261a71e61db" id="r_acac5313d0ca88cf2fe36b261a71e61db"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acac5313d0ca88cf2fe36b261a71e61db">_pttPin</a></td></tr>
+<tr class="memdesc:acac5313d0ca88cf2fe36b261a71e61db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mémorise la broche du PTT.  <br /></td></tr>
+<tr class="memitem:ac320ec476bd9f94e08a260689041c984" id="r_ac320ec476bd9f94e08a260689041c984"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac320ec476bd9f94e08a260689041c984">_txLedPin</a></td></tr>
+<tr class="memdesc:ac320ec476bd9f94e08a260689041c984"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mémorise la broche de la LED d'émission.  <br /></td></tr>
+<tr class="memitem:ab31d349a671aece66b53cc5b5da789e0" id="r_ab31d349a671aece66b53cc5b5da789e0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab31d349a671aece66b53cc5b5da789e0">_dot_len_ms</a></td></tr>
+<tr class="memdesc:ab31d349a671aece66b53cc5b5da789e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcule et mémorise la durée d'un "point" en millisecondes, qui définit tout le rythme.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Le "télégraphiste" expert en code Morse. </p>
+<p>Cette classe sait comment convertir du texte en signaux Morse. Elle connaît l'alphabet, gère le rythme des points et des traits, et commande physiquement l'émetteur (via le PTT) et la LED d'émission. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Documentation des constructeurs et destructeur</h2>
+<a id="a576074e489a4ed685cdaa99d0b488b50" name="a576074e489a4ed685cdaa99d0b488b50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a576074e489a4ed685cdaa99d0b488b50">&#9670;&#160;</a></span>EmetteurMorse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">EmetteurMorse::EmetteurMorse </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>pttPin</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>txLedPin</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>wpm</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construit notre "télégraphiste". </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pttPin</td><td>La broche pour "appuyer sur le bouton du micro" (PTT). </td></tr>
+    <tr><td class="paramname">txLedPin</td><td>La broche pour allumer la LED rouge d'émission. </td></tr>
+    <tr><td class="paramname">wpm</td><td>Le rythme de travail, en mots par minute (MPM). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions membres</h2>
+<a id="aba9287616dedb467115f067f7d315e05" name="aba9287616dedb467115f067f7d315e05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba9287616dedb467115f067f7d315e05">&#9670;&#160;</a></span>dash()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EmetteurMorse::dash </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Génère le son long ("trait") du Morse. </p>
+
+</div>
+</div>
+<a id="a638a4318652eaf78dfe16ee1863c7dcd" name="a638a4318652eaf78dfe16ee1863c7dcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a638a4318652eaf78dfe16ee1863c7dcd">&#9670;&#160;</a></span>dot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EmetteurMorse::dot </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Génère le son court ("point") du Morse. </p>
+
+</div>
+</div>
+<a id="a21126be06abd6e7c7029ceb54a2401cb" name="a21126be06abd6e7c7029ceb54a2401cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21126be06abd6e7c7029ceb54a2401cb">&#9670;&#160;</a></span>pttOff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EmetteurMorse::pttOff </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Relâche le bouton du PTT et éteint la LED d'émission. </p>
+
+</div>
+</div>
+<a id="aecc00dba95a6d9b43e837a5722cce63c" name="aecc00dba95a6d9b43e837a5722cce63c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecc00dba95a6d9b43e837a5722cce63c">&#9670;&#160;</a></span>pttOn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EmetteurMorse::pttOn </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Appuie sur le bouton du PTT et allume la LED d'émission. </p>
+
+</div>
+</div>
+<a id="a0c0d63e0b5542cf775a099e9aa7a60ac" name="a0c0d63e0b5542cf775a099e9aa7a60ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c0d63e0b5542cf775a099e9aa7a60ac">&#9670;&#160;</a></span>sendChar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EmetteurMorse::sendChar </td>
+          <td>(</td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Interne : traduit et envoie un seul caractère. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>La lettre ou le chiffre à envoyer. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4c14514f6b098786f9e0439ba89b7646" name="a4c14514f6b098786f9e0439ba89b7646"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c14514f6b098786f9e0439ba89b7646">&#9670;&#160;</a></span>sendMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EmetteurMorse::sendMessage </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>message</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Prend un message et le transmet en Morse du début à la fin. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>Le texte à envoyer. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Documentation des données membres</h2>
+<a id="ab31d349a671aece66b53cc5b5da789e0" name="ab31d349a671aece66b53cc5b5da789e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab31d349a671aece66b53cc5b5da789e0">&#9670;&#160;</a></span>_dot_len_ms</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int EmetteurMorse::_dot_len_ms</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calcule et mémorise la durée d'un "point" en millisecondes, qui définit tout le rythme. </p>
+
+</div>
+</div>
+<a id="acac5313d0ca88cf2fe36b261a71e61db" name="acac5313d0ca88cf2fe36b261a71e61db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acac5313d0ca88cf2fe36b261a71e61db">&#9670;&#160;</a></span>_pttPin</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int EmetteurMorse::_pttPin</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Mémorise la broche du PTT. </p>
+
+</div>
+</div>
+<a id="ac320ec476bd9f94e08a260689041c984" name="ac320ec476bd9f94e08a260689041c984"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac320ec476bd9f94e08a260689041c984">&#9670;&#160;</a></span>_txLedPin</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int EmetteurMorse::_txLedPin</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Mémorise la broche de la LED d'émission. </p>
+
+</div>
+</div>
+<hr/>La documentation de cette classe a été générée à partir des fichiers suivants :<ul>
+<li><a class="el" href="../../d7/dc5/_emetteur_morse_8h_source.html">EmetteurMorse.h</a></li>
+<li><a class="el" href="../../d0/d95/_emetteur_morse_8cpp.html">EmetteurMorse.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../d6/d4f/class_emetteur_morse.html">EmetteurMorse</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>
