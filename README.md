@@ -5,43 +5,50 @@ Ce projet contient le code source pour une balise Morse multi-bandes (80m à 6m)
 ## 🧭 Fonctionnalités
 
 * **Multi-bandes** : Gère les émissions sur 9 bandes radio-amateurs, du 80m au 6m.
-* **Synchronisation GPS** : Les émissions sont calées précisément au début de chaque minute grâce aux données d'un module GPS.
-* **Locator Dynamique** : Calcule automatiquement le locator Maidenhead sur 6 caractères et peut l'insérer dans le message Morse.
-* **Conception Orientée Objet** : Le code est structuré en classes logiques (`GestionnaireGPS`, `GestionnaireDDS`, `EmetteurMorse`) pour une meilleure lisibilité et maintenance.
-* **Haute Personnalisation** : L'indicatif, les messages, les fréquences et les broches de contrôle sont facilement configurables via des constantes.
-* **Documentation Intégrée** : Le code est entièrement commenté en français selon les standards Doxygen pour une génération facile de la documentation.
+* **Synchronisation GPS** : Les émissions sont calées précisément au début de chaque minute.
+* **Locator Dynamique** : Calcule automatiquement le locator Maidenhead et l'insère dans le message.
+* **Indicateurs Visuels** : Une LED dédiée s'allume pour indiquer la bande en cours d'utilisation, et une autre pour signaler l'émission (PTT actif).
+* **Conception Orientée Objet** : Le code est structuré en classes logiques pour une meilleure lisibilité et maintenance.
+* **Haute Personnalisation** : Indicatif, messages, fréquences et broches sont facilement configurables.
+* **Documentation Intégrée** : Le code est entièrement commenté selon les standards Doxygen.
 
----
+***
 
 ## 🛠️ Matériel Requis
 
 * Un **Arduino Mega 2560** (ou compatible).
 * Un **Générateur de fréquence DDS AD9850**.
 * Un **Module GPS** avec sortie série (protocole NMEA, 9600 bauds).
-* Une **carte de filtres passe-bas** commutable par des niveaux logiques.
-* Un **système d'amplification HF** (préampli + ampli) avec une entrée PTT (Push-To-Talk).
-* Une LED et une résistance (220Ω) pour l'indicateur de statut GPS.
+* Une **carte de filtres passe-bas** commutable.
+* Un **système d'amplification HF** (préampli + ampli) avec entrée PTT.
+* **LEDs** et résistances (220Ω) :
+    * 1 LED pour le statut GPS (fix).
+    * 1 LED pour le statut d'émission (TX).
+    * 1 LED pour chaque bande utilisée (ex: 9 LEDs pour 9 bandes).
 
----
+***
 
 ## 🔌 Schéma de Câblage
 
 | Composant          | Broche du Composant | Broche de l'Arduino Mega 2560 |
 | :----------------- | :------------------ | :---------------------------- |
 | **Module GPS** | TX (Transmit)       | **19 (RX1)** |
-|                    | VCC                 | 5V                            |
-|                    | GND                 | GND                           |
-| **LED Statut GPS** | Anode (+)           | **22** (via résistance 220Ω)  |
-|                    | Cathode (-)         | GND                           |
+| **LED Statut GPS** | Anode (+)           | **22** |
+| **LED Émission (TX)** | Anode (+)           | **23** |
 | **Commande PTT** | Signal PTT          | **24** |
 | **DDS AD9850** | DATA                | **30** |
-|                    | W_CLK               | **26** |
-|                    | FQ_UD               | **28** |
+|                    | W\_CLK              | **26** |
+|                    | FQ\_UD              | **28** |
 |                    | RESET               | **32** |
 | **Filtre 80m** | Commande            | **34** |
+| **LED Bande 80m** | Anode (+)           | **43** |
+| **Filtre 40m** | Commande            | **35** |
+| **LED Bande 40m** | Anode (+)           | **44** |
 | **... (etc)** | ...                 | **...** |
 
----
+*N'oubliez pas de connecter toutes les cathodes des LEDs et les masses (GND) des modules à la masse commune de l'Arduino.*
+
+***
 
 ## 🚀 Installation
 
@@ -60,7 +67,7 @@ Ce projet contient le code source pour une balise Morse multi-bandes (80m à 6m)
     * Sélectionnez le bon port (`Outils` > `Port`).
     * Cliquez sur le bouton "Téléverser".
 
----
+***
 
 ## 📄 Génération de la Documentation
 
@@ -74,19 +81,20 @@ Ce projet est prêt pour [Doxygen](https://www.doxygen.nl/). Pour générer la d
     ```
 4.  Ouvrez le fichier `index.html` situé dans le dossier `doxygen_html` nouvellement créé.
 
----
+***
 
 ## 📂 Structure du Projet
 
-* `balise_hf.ino` : Fichier principal qui contient la logique de `setup()` et `loop()`.
-* `GestionnaireGPS.h/.cpp` : Classe gérant la communication avec le module GPS.
-* `GestionnaireDDS.h/.cpp` : Classe gérant le contrôle du générateur de fréquence AD9850.
-* `EmetteurMorse.h/.cpp` : Classe chargée de la conversion texte->morse et de l'émission.
-* `Balise.h/.cpp` : Classe simple contenant les paramètres d'une balise (fréquence, message...).
-* `Doxyfile` : Fichier de configuration pour la génération de la documentation.
+Le projet est organisé autour des fichiers suivants pour une meilleure clarté :
 
----
-
-## ⚖️ Licence
-
-Ce projet est distribué sous la **Licence MIT**. Voir le fichier `LICENSE` pour plus de détails.
+* `balise_hf.ino` : Le **fichier principal** qui orchestre tout le projet.
+* `GestionnaireGPS.h` : La déclaration de la classe qui gère la communication avec le **module GPS**.
+* `GestionnaireGPS.cpp` : L'implémentation (le code) de la classe `GestionnaireGPS`.
+* `GestionnaireDDS.h` : La déclaration de la classe qui **pilote le générateur de fréquence** AD9850.
+* `GestionnaireDDS.cpp` : L'implémentation de la classe `GestionnaireDDS`.
+* `EmetteurMorse.h` : La déclaration de la classe qui se charge de **traduire et d'envoyer le code Morse**.
+* `EmetteurMorse.cpp` : L'implémentation de la classe `EmetteurMorse`.
+* `Balise.h` : La déclaration de la classe qui sert de **"fiche de réglages"** pour chaque bande.
+* `Balise.cpp` : L'implémentation de la classe `Balise`.
+* `Doxyfile` : Le fichier de **configuration pour la documentation** Doxygen.
+* `README.md` : Ce fichier d'information.
