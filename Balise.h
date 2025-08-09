@@ -18,9 +18,8 @@ public:
    * @param message Le texte à envoyer.
    * @param frequencyMhz La fréquence à utiliser, en Mégahertz.
    * @param filterPin La broche du filtre pour cette fréquence.
-   * @param ledPin La broche de la LED pour cette fréquence.
    */
-  Balise(const char* message, double frequencyMhz, int filterPin, int ledPin);
+  Balise(const char* message, double frequencyMhz, int filterPin);
 
   /**
    * @brief Permet de lire le message écrit sur la fiche.
@@ -37,16 +36,11 @@ public:
    */
   int getFilterPin() const;
   
-  /**
-   * @brief Permet de lire le numéro de la broche de la LED.
-   */
-  int getLedPin() const;
 
 private:
   const char* _message;       ///< Le message à émettre.
   unsigned long _frequencyHz; ///< La fréquence, stockée en Hertz.
   int _filterPin;             ///< La broche du filtre.
-  int _ledPin;                ///< La broche de la LED de bande.
 };
 
 #endif

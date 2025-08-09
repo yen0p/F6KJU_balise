@@ -41,10 +41,40 @@ public:
   bool hasValidLocation() const;
 
   /**
-   * @brief Donne le nombre de secondes de l'heure actuelle.
-   * @return Un nombre entre 0 et 59.
+   * @brief Récupère l'heure actuelle (UTC).
+   * @return L'heure au format 24h (0-23).
    */
-  uint8_t getSeconds() const;
+  uint8_t getHeure() const;
+
+  /**
+   * @brief Récupère les minutes de l'heure actuelle.
+   * @return Le nombre de minutes (0-59).
+   */
+  uint8_t getMinute() const;
+  
+  /**
+   * @brief Récupère les secondes de l'heure actuelle.
+   * @return Le nombre de secondes (0-59).
+   */
+  uint8_t getSeconde() const;
+
+  /**
+   * @brief Récupère le jour du mois actuel.
+   * @return Le jour (1-31).
+   */
+  uint8_t getJour() const;
+
+  /**
+   * @brief Récupère le mois actuel.
+   * @return Le mois (1-12).
+   */
+  uint8_t getMois() const;
+
+  /**
+   * @brief Récupère l'année actuelle.
+   * @return L'année sur 4 chiffres (ex: 2025).
+   */
+  uint16_t getAnnee() const;
 
   /**
    * @brief Donne la latitude (position Nord/Sud).
@@ -66,16 +96,10 @@ public:
   const char* getLocator() const;
 
 private:
-  /**
-   * @brief Méthode interne pour faire le calcul de conversion des coordonnées.
-   * @details Applique une formule mathématique pour transformer la latitude et la
-   * longitude en un code de 6 caractères.
-   */
   void calculateLocator();
-
-  HardwareSerial& _gpsSerial; ///< Le canal de communication avec le GPS.
-  TinyGPSPlus _gps;           ///< L'outil (de la bibliothèque TinyGPS++) qui fait le gros du travail de déchiffrage.
-  char _locator[7];           ///< Une petite boîte pour ranger le locator une fois calculé.
+  HardwareSerial& _gpsSerial;
+  TinyGPSPlus _gps;
+  char _locator[7];
 };
 
 #endif
